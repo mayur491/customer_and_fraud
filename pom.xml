@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.codemayur</groupId>
-	<artifactId>codemayurservices</artifactId>
+	<artifactId>customer_and_fraud</artifactId>
 	<packaging>pom</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -13,13 +13,13 @@
 		<module>fraud</module>
 	</modules>
 
-	<name>codemayurservices</name>
+	<name>customer_and_fraud</name>
 	<url>https://www.codemayur.com</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>8</maven.compiler.source>
-		<maven.compiler.target>8</maven.compiler.target>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
 		<spring.boot.maven.plugin.version>2.5.7</spring.boot.maven.plugin.version>
 		<spring.boot.dependencies.version>2.5.7</spring.boot.dependencies.version>
 	</properties>

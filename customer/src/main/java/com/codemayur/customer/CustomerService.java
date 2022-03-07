@@ -1,21 +1,25 @@
 package com.codemayur.customer;
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@AllArgsConstructor
 public class CustomerService {
 
-	public void registerCustomer(CustomerRegistrationRequest request) {
-		Customer customer = Customer.builder()
-				.firstName(request.getFirstName())
-				.lastName(request.getLastName())
-				.email(request.getEmail())
-				.build();
+    private final CustomerRepository customerRepository;
 
-		// TODO: check if email is valid
-		// TODO: check if email is not already taken
-		// TODO: store customer in db
-		
-	}
+    public void registerCustomer(CustomerRegistrationRequest request) {
+        Customer customer = Customer.builder()
+                .firstName(request.firstName())
+                .lastName(request.lastName())
+                .email(request.email())
+                .build();
+
+        // TODO: check if email is valid
+        // TODO: check if email is not already taken
+
+        customerRepository.saveAndFlush(customer);
+    }
 
 }
